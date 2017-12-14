@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet"  type=text/css  href="{{ url_for('static', filename='styles.css')}}">
+		<title>User Item</title>
+	</head>
+	<body>
+        <div id="header">
+			<h1>Catalog App</h1>
+			<button><a href="{{url_for('gdisconnect')}}">Logout</a></button>
+		</div>
+        <div class="content" style="width:70%;height:20%;background-color:#dad0d0;margin-left:216px;margin-top:33px;">
+			<h1 style="color:red;padding-left: 10px;padding-top: 10px;">{{title}}</h1>
+            <textarea maxlength="250" rows="6" 
+                      style="padding-left: 10px; margin: 0px;font-weight:bold;font-size:20px;
+                             width: 528px;height: 127px;">Description:{{content.description}}
+			</textarea>
+            <br>
+            <a href="{{url_for('editItem',Id_Edit=item_id,title_edit=title)}}"style="color:red">
+                Edit</a>
+            <span style="color:black"> |</span>
+            <a href="{{url_for('deleteItem',id_delete=item_id,title_delete=title)}}"
+               style="color:red">Delete</a>
+            
+        </div>
+	</body>
+</html>

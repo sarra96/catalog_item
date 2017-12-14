@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet"  type=text/css  href="{{ url_for('static', filename='styles.css')}}">
+		<title>Delete Item</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Catalog App</h1>
+			<button><a href="{{url_for('gdisconnect')}}">Logout</a></button>
+		</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form  action= "#" method = "post">
+            <div style=" width:601px; height: 178px; border: -1px solid #d4cdcd;
+                        background-color: #d4cdcd; padding-top: 3px; padding-left: 10px;">
+                <h1>
+                    Delete Item '  
+                    <span style="color:red;font-weight: bold;"> {{item.title}} </span>
+                    ' !!!!
+                </h1>
+                <h4>Are You Sure You Want To Delete ?!!</h4>
+                <button style="background-color: #dc1313; color:aliceblue; width: 147px;
+                               font-size: 20px; border: 1px solid #dc1313;
+                               font-weight: bold;"
+                        type="submit"  id="submit" >Submit</button>
+            </div>
+        </form>
+        <a href = "{{url_for('showCatalog')}}" style="position: relative; top:-59px; left: 113px;">
+            <button style="background-color: #dc1313; color: aliceblue; width: 147px;
+                           margin-left: 65px; font-size: 20px; border: 1px solid #dc1313;
+                           font-weight: bold;">Cancel</button>
+        </a>
+
+	</body>
+</html>
+

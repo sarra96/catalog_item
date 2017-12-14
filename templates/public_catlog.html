@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet"  type=text/css  href="{{ url_for('static', filename='styles.css')}}">
+		<title>Public Catalog</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Catalog App</h1>
+			<button><a href="{{url_for('showLogin')}}">Login</a></button>
+		</div>
+        <div class="content">
+			<div class="catogry">
+				<h1>Catogries</h1>
+				<ul>
+					{% for i in catogries %}
+                    <li> 
+						<a href="{{url_for('specific_category',catogry_name = i.name,catogry_id = i.id )}}">
+						{{ i.name }} </a>             
+                     </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="item">
+				<h1>{{catogry_name}} ( {{count}} items )</h1>
+				<ul>
+					{% for item in items %}
+					<li>
+						<a href="{{url_for('specific_item',item_title = item.title,item_ctogrey = item.category_id)}}">
+						{{ item.title }} </a>
+                
+                     </li>
+                     {% endfor %}
+                </ul>
+            </div>
+           
+        </div>
+	</body>
+</html>

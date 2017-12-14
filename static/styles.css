@@ -1,0 +1,83 @@
+body
+{
+     list-style: none;
+}
+#header
+{
+    height: 128px;
+    background-color: #dc1313;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -21px;
+	
+}
+#header h1
+{
+    color: white;
+    padding-top: 24px;
+}
+
+#header  button,.add button
+{
+    background-color: #dbdde8;
+    float: right;
+    margin-top: -50px;
+    color: red;
+    width: 161px;
+
+}
+
+#header  button a, .add button a
+{
+    color: brown;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.catogry ul,.item ul
+{
+    list-style: none;
+    height: 20px;
+    margin-left: -34px;
+    
+}
+.catogry ul li a,.item ul li a
+{
+    text-decoration: none;
+}
+
+.catogry
+{
+	width: 138px;
+	height: 26px;
+	margin-left: 329px;
+	margin-top: 70px;
+}
+.item 
+{
+	float: right;
+    margin-right: 366px;
+    margin-top: -39px;
+}
+.add
+{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1224px;
+}
+
+.cancel_edit
+{
+    position: relative;
+    top: -59px;
+    left: 10px;
+    left: 113px;
+
+    background-color: #dbdde8;
+    color: red;
+    width: 161px;
+}

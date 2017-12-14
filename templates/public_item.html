@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet"  type=text/css  href="{{ url_for('static', filename='styles.css')}}">
+		<title>Public Item</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Catalog App</h1>
+			<button><a href="{{url_for('showLogin')}}">Login</a></button>
+	    </div>
+        <div class="content" style="width:70%;height:20%;background-color:#dad0d0;margin-left:216px;margin-top : 33px;">
+			<h1 style="text-align: center;">{{title}}</h1>
+              <p  style="padding-left: 10px;">{{content.description}}</p>
+         </div>
+	</body>
+</html>
